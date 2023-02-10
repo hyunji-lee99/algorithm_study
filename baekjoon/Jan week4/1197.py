@@ -40,9 +40,9 @@ sorted_edge=sorted(edge, key=lambda x:x[2])
 weight=0
 for n1,n2,w in sorted_edge:
     #사이클을 생성하는지 확인
-    if parent[n1]!=parent[n2]:
+    if find_parent(n1)!=find_parent(n2):
+        # union-find 사용
+        union(n1, n2)
         weight+=w
-        #union-find 사용
-        union(n1,n2)
 
 print(weight)
