@@ -22,7 +22,6 @@ for n1,n2 in answer:
     queue = deque()
     queue.append((n1, 0))
     visited = [0] * (n + 1)
-    visited[n1]=1
     while queue:
         cur,d=queue.popleft()
         visited[cur]=1
