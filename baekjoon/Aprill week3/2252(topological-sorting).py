@@ -37,9 +37,3 @@ while queue:
 for node in line:
     print(node, end=' ')
 
-
-
-
-
-
-
