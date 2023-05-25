@@ -13,5 +13,4 @@ for i in range(d+1):
             dp[e]=dp[s]+w
 
 
-
 print(dp[d])
