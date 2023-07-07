@@ -27,8 +27,6 @@ snake_index=deque([(1,1)])
 # 상 우 하 좌
 directions=[(-1,0),(0,1),(1,0),(0,-1)]
 cur_dir=1
-head=(1,1)
-tail=(1,1)
 
 time=1
 while True:
