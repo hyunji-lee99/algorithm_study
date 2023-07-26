@@ -29,8 +29,3 @@ while heap:
 else:
     # heap이 모두 소진될 때까지 break에 걸리지 않으면 사이클이 존재하지 않는 것이므로 -1
     print(-1)
-
-
-
-
-
