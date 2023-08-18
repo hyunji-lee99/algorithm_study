@@ -11,12 +11,9 @@ while end<n:
     if end<n and count[numbers[end]]+1<=k:
         count[numbers[end]]+=1
         end+=1
-        ans=max(ans, end-start)
     else:
         count[numbers[start]]-=1
         start+=1
+    ans = max(ans, end - start)
 
 print(ans)
-
-
-
