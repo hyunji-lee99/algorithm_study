@@ -2,7 +2,7 @@ import sys
 from collections import deque
 
 field=[[] for _ in range(6)]
-# 12개의 행으로 이루어진 필드가 아니라, 열을 기준으로 6개의 행으로 필드를 만듦
+# 12개의 행으로 이루어진 필드가 아니라, 열을 기준으로 6개의 행으로 필드를 만듦(field 업데이트를 pop으로 간단하게 하기 위해서)
 for _ in range(12):
     line=list(sys.stdin.readline().strip())
     for idx in range(6):
@@ -27,8 +27,6 @@ def BFS(i,j):
     color=field[i][j]
     directions=[(0,1),(1,0),(0,-1),(-1,0)]
 
-    # 삭제된 뿌요의 개수
-    cnt=1
     while queue:
         y,x=queue.popleft()
         for di in directions:
@@ -48,8 +46,6 @@ def BFS(i,j):
 
 ans=0
 repeat=True
-# 이미 특정 색깔을 한 번 처리한 경우
-
 while repeat:
     isProcessed = False
     visited = [[0] * 12 for _ in range(6)]
